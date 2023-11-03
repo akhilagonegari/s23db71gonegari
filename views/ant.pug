@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  - var Ant=[{antName:"Cutee",antAge:1,antColor:"Black"},{antName:"flower",antAge:11,antColor:"white"},{antName:"Har",antAge:13,antColor:"red"}]
+  div(class="container-fluid")
+  div(class="row")
+   each f,index in Ant
+    div(class="col-sm-2" onclick =`buy(${index})`) #{f.antName}, #{f.antAge}, #{f.antColor}
+
+     script. 
+       function buy(index)
+       {
+        alert(`you purchased Item: ${index+1}`)
+       }
