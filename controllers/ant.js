@@ -29,9 +29,9 @@ exports.ant_create_post = async function(req, res) {
     // Even though bodies can be in many different formats, we will be picky
     // and require that it be a json object
     // {"costume_type":"goat", "cost":12, "size":"large"}
-    document.ant_type = req.body.ant_type;
-    document.cost = req.body.cost;
-    document.size = req.body.size;
+    document.ant_Name = req.body.ant_Name;
+    document.age = req.body.Age;
+    document.Color = req.body.Color;
     try{
     let result = await document.save();
     res.send(result);
