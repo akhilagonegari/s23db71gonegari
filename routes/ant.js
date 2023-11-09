@@ -1,9 +1,6 @@
 var express = require('express');
+const ant_controllers= require('../controllers/ant');
 var router = express.Router();
-
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('ant', { title: 'Search Results Ant' });
-});
-
+/* GET costumes */
+router.get('/', ant_controllers.ant_view_all_Page );
 module.exports = router;
